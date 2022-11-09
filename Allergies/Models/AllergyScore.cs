@@ -7,6 +7,20 @@ namespace Allergies
     public string AllergyCheck(int code)
     {
       string things = "";
+      string[] allergies = {"Cats, ", "Pollen, ", "Chocolate, ", "Tomatoes, ", "Strawberies, ",  "Shellfish, ", "Peanuts, ", "Eggs, "};
+      int[] scores = {128, 64, 32, 16, 8, 4, 2, 1};
+      
+      for(int i = 0; i < 8; i++)
+      {
+        if(code >= scores[i])
+        {
+          things += allergies[i];
+          code -= scores[i];
+        }
+      }
+    /*{  
+       
+      }
       if(code >= 128)
       {  
         things += "Cats, ";
@@ -46,7 +60,8 @@ namespace Allergies
       {
           things += "Eggs, ";
           code -= 1;
-      }
+      }*/
+      things = things.Remove(things.Length - 2, 2);  
       return things;
     }
   }

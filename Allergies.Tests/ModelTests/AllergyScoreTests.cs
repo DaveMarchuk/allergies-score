@@ -10,14 +10,14 @@ namespace Allergies.Test
     public void DoesAllergyScoreReturnValue_True()
     {
       AllergyScore returnValue = new AllergyScore();
-      Assert.AreEqual("Peanuts, ", returnValue.AllergyCheck(2));
+      Assert.AreEqual("Peanuts", returnValue.AllergyCheck(2));
     }
     
     [TestMethod]
     public void DoesAllergyScoreReturnAllergies_True()
     {
       AllergyScore returnValue = new AllergyScore();
-      Assert.AreEqual("Peanuts, Eggs, ", returnValue.AllergyCheck(3));
+      Assert.AreEqual("Peanuts, Eggs", returnValue.AllergyCheck(3));
     }
   }
 }
